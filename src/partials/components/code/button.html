@@ -1,0 +1,35 @@
+<div class="container">  
+    <div class="section">
+        <h2 class="text-center mt-5 mb-4">Code Example</h2>
+        <div class="all-section">
+            <pre class='code code-html'><label>HTML</label><code>&lt;a class="btn nh-btn btn--primary btn--solid" href="javascript:void(0)">Primary Button&lt;/a&gt;</code></pre>
+            <pre class='code code-css'><label>CSS</label><code>.nh-btn {
+    box-shadow: $box-shadow;
+    color: $font-color;
+    display: inline-block;
+    font-family: $font-family;
+    font-size: $font-size;
+    padding: .5rem 1rem;
+    @include text-style;
+} 
+
+.btn {
+    &--primary#{&}--solid {
+        background-color: $blue;
+        @include button-bg($blue);
+    }
+}</code></pre>
+            <pre class='code code-jquery'><label>Jquery</label><code>$(document).ready(function(){
+    $(".collapse.show").each(function(){
+        $(this).prev(".card__box").find(".fa").addClass("fa-angle-up").removeClass("fa-angle-down");
+    });
+
+    $(".collapse").on('show.bs.collapse', function(){
+        $(this).prev(".card__box").find(".fa").removeClass("fa-angle-down").addClass("fa-angle-up");
+    }).on('hide.bs.collapse', function(){
+        $(this).prev(".card__box").find(".fa").removeClass("fa-angle-up").addClass("fa-angle-down");
+    });
+});</code></pre>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,168 @@
+{% set planFeatures = {
+    'bayi' : [
+            { 'feature': '~ 15.000 visitors/month', 'tooltip': 'Ini adalah nilai perkiraan pengunjung per bulan yang dapat ditampung akun hosting anda'},
+            { 'feature': '500 MB Disk Space', 'tooltip': 'Kami menetapkan batasan jumlah ruang disk sebanyak 500MB dalam paket ini'},
+            { 'feature': 'Unlimited Bandwidth', 'tooltip': "Kami tidak menetapkan batasan bandwidth yang dapat Anda gunakan untuk pengoperasian situs web Anda selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': 'Unlimited Database', 'tooltip': "Anda tidak dibatasi untuk membuat database pada akun hosting Anda. Selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': '1 Domain', 'tooltip': "Anda hanya bisa menggunakan 1 domain pada akun hosting Anda."},
+            { 'feature': 'Instant Backup', 'tooltip': "Kami memberikan fasilitas untuk membuat cadangan dari seluruh akun cPanel Anda kapan saja. Setelah selesai melakukan backup, Anda akan diberi link download. Anda bisa menggunakan backup ini untuk mengembalikan akun Anda di server kami jika diperlukan."},
+            { 'feature': 'Unlimited SSL Gratis Selamanya', 'tooltip': "Kami memberikan fasilitas SSL gratis selamanya dan dapat digunakan untuk semua klien layanan hosting kami tanpa batasan jumlah website, domain ataupun subdomain."},
+            { 'feature': 'Free Premium Course', 'tooltip': "Kami memberikan fasilitas Course Premium gratis sebagai sarana pengetahuan untuk kemudahan pengelolaan website Anda."}
+        ],
+        'pelajar' : [
+            { 'feature': '~ 60.000 visitors/month', 'tooltip': 'Ini adalah nilai perkiraan pengunjung per bulan yang dapat ditampung akun hosting anda'},
+            { 'feature': 'Unlimited Disk Space', 'tooltip': "Kami tidak menetapkan batasan jumlah ruang disk yang dapat Anda gunakan untuk pengoperasian normal situs web pribadi, kecil, atau menengah selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': 'Unlimited Bandwidth', 'tooltip': "Kami tidak menetapkan batasan bandwidth yang dapat Anda gunakan untuk pengoperasian situs web Anda selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': 'Unlimited POP3 Email', 'tooltip': "Anda berhak membuat akun email tanpa batasan dan melakukan pengiriman sebanyak2nya kepada klien Anda selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': 'Unlimited Database', 'tooltip': "Anda tidak dibatasi untuk membuat database pada akun hosting Anda. Selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': '10 Addon Domain', 'tooltip': "Anda hanya dapat membuat 10 Addon domain pada akun hosting Anda."},
+            { 'feature': 'Instant Backup', 'tooltip': "Kami memberikan fasilitas untuk membuat cadangan dari seluruh akun cPanel Anda kapan saja. Setelah selesai melakukan backup, Anda akan diberi link download. Anda bisa menggunakan backup ini untuk mengembalikan akun Anda di server kami jika diperlukan."},
+            { 'feature': 'Domain Gratis', 'tooltip': "Kami memberikan 1 gratis domain dengan ekstensi " ~ free_tlds ~", dengan minimal durasi 1 tahun pembayaran."},
+            { 'feature': 'Unlimited SSL Gratis Selamanya', 'tooltip': "Kami memberikan fasilitas SSL gratis selamanya dan dapat digunakan untuk semua klien layanan hosting kami tanpa batasan jumlah website, domain ataupun subdomain."},
+            { 'feature': 'Free Premium Course', 'tooltip': "Kami memberikan fasilitas Course Premium gratis sebagai sarana pengetahuan untuk kemudahan pengelolaan website Anda."}
+            ],
+        'personal' : [
+            { 'feature': '~ 135.000 visitors/month', 'tooltip': 'Ini adalah nilai perkiraan pengunjung per bulan yang dapat ditampung akun hosting anda'},
+            { 'feature': 'Unlimited Disk Space', 'tooltip': "Kami tidak menetapkan batasan jumlah ruang disk yang dapat Anda gunakan untuk pengoperasian normal situs web pribadi, kecil, atau menengah selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': 'Unlimited Bandwidth', 'tooltip': "Kami tidak menetapkan batasan bandwidth yang dapat Anda gunakan untuk pengoperasian situs web Anda selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': 'Unlimited POP3 Email', 'tooltip': "Anda berhak membuat akun email tanpa batasan dan melakukan pengiriman sebanyak2nya kepada klien Anda selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': 'Unlimited Database', 'tooltip': "Anda tidak dibatasi untuk membuat database pada akun hosting Anda. Selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': 'Unlimited Addon Domain', 'tooltip': "Anda tidak dibatasi untuk membuat Addon domain pada akun hosting Anda. Selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': 'Instant Backup', 'tooltip': "Kami memberikan fasilitas untuk membuat cadangan dari seluruh akun cPanel Anda kapan saja. Setelah selesai melakukan backup, Anda akan diberi link download. Anda bisa menggunakan backup ini untuk mengembalikan akun Anda di server kami jika diperlukan."},
+            { 'feature': 'Domain Gratis', 'tooltip': "Kami memberikan 1 gratis domain dengan ekstensi " ~ free_tlds ~", dengan minimal durasi 1 tahun pembayaran."},
+            { 'feature': 'Unlimited SSL Gratis Selamanya', 'tooltip': "Kami memberikan fasilitas SSL gratis selamanya dan dapat digunakan untuk semua klien layanan hosting kami tanpa batasan jumlah website, domain ataupun subdomain."},
+            { 'feature': 'SpamAsassin Mail Protection', 'tooltip': "Fasilitas untuk mendeteksi email spam yang tidak diinginkan lalu mencegah masuknya email-email tersebut ke Inbox Anda."},
+            { 'feature': 'Free Premium Course', 'tooltip': "Kami memberikan fasilitas Course Premium gratis sebagai sarana pengetahuan untuk kemudahan pengelolaan website Anda."}
+            ],
+        'bisnis' : [
+            { 'feature': '~ 180.000 visitors/month', 'tooltip': 'Ini adalah nilai perkiraan pengunjung per bulan yang dapat ditampung akun hosting anda'},
+            { 'feature': 'Unlimited Disk Space', 'tooltip': "Kami tidak menetapkan batasan jumlah ruang disk yang dapat Anda gunakan untuk pengoperasian normal situs web pribadi, kecil, atau menengah selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': 'Unlimited Bandwidth', 'tooltip': "Kami tidak menetapkan batasan bandwidth yang dapat Anda gunakan untuk pengoperasian situs web Anda selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': 'Unlimited POP3 Email', 'tooltip': "Anda berhak membuat akun email tanpa batasan dan melakukan pengiriman sebanyak2nya kepada klien Anda selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': 'Unlimited Database', 'tooltip': "Anda tidak dibatasi untuk membuat database pada akun hosting Anda. Selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': 'Unlimited Addon Domain', 'tooltip': "Anda tidak dibatasi untuk membuat Addon domain pada akun hosting Anda. Selama itu sesuai dengan <a href='https://www.niagahoster.co.id/syarat-dan-ketentuan'>ToS</a> kami!"},
+            { 'feature': 'Magic Auto Backup & Restore', 'tooltip': "Kami memberikan fasilitas untuk membuat cadangan dari seluruh akun cPanel Anda kapan saja. Setelah selesai melakukan backup, Anda bisa mengembalikan file backup yang Anda butuhkan saja."},
+            { 'feature': 'Domain Gratis', 'tooltip': "Kami memberikan 1 gratis domain dengan ekstensi " ~ free_tlds ~", dengan minimal durasi 1 tahun pembayaran."},
+            { 'feature': 'Unlimited SSL Gratis Selamanya', 'tooltip': "Kami memberikan fasilitas SSL gratis selamanya dan dapat digunakan untuk semua klien layanan hosting kami tanpa batasan jumlah website, domain ataupun subdomain."},
+            { 'feature': 'Prioritas Layanan Support', 'tooltip': "Tim Customer Experience kami yang terlatih dan berdedikasi akan siap 24/7/365 melalui telepon, live chat, dan email membantu menyelesaikan masalah segala hal yang berhubungan dengan akun web hosting atau billing Anda."},
+            { 'feature': 'SpamAsassin Mail Protection', 'tooltip': "Fasilitas untuk mendeteksi email spam yang tidak diinginkan lalu mencegah masuknya email-email tersebut ke Inbox Anda."},
+            { 'feature': 'Free Premium Course', 'tooltip': "Kami memberikan fasilitas Course Premium gratis sebagai sarana pengetahuan untuk kemudahan pengelolaan website Anda."}
+        ],
+    }
+%}
+
+
+<section class="package">
+    <h2 class="display-4 text-uppercase text-center mt-5 mb-4">Card Component</h2>
+    <div class="row align-items-xl-start">
+        <div class="package__card-wrapper  col-12 col-md-6 col-xl-3">
+            <div class="package__tooltip package__tooltip--price">
+            Anda akan mendapatkan cashback hingga 24 Poin dari Pembelian Produk ini (up to maximum)
+            </div>
+            <div class="package__card package--bayi">
+                <p class="package__label package__label--green">Termurah!</p>
+                <h3 class="package__package-title">Bayi</h3>
+                <p class="package__price package__price--hidden">0</p>
+                <p class="package__discount-price">Rp 10.000</p>
+                <p class="package__point">254 - 509 Poin</p>
+                <div class="package__hr"></div>
+                <a href="#" class="btn nh-btn btn--secondary btn--solid no-gutters gtmProductView" data-product="Bayi"  data-label="Section Table Price">Pilih Sekarang</a>
+                <p class="package__description">Sesuai untuk Pemula atau Belajar Website</p>
+                <ul class="package__feature">
+                    {% for item in planFeatures.bayi %}
+                    <li>
+                        <div class="package__icon nh-tooltip">
+                            <img src="https://www.niagahoster.co.id/assets/images/2019/hosting-package/icon-question-mark.svg" alt="">
+                            <span class="nh-tooltip__text nh-tooltip__text--right">{{ item.tooltip }}</span>
+                        </div>
+                        <p class="package__feature-text">{{ item.feature }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <a class="package__see-detail" href="">Lihat detail fitur</a>
+            </div>
+        </div>
+        <div class="package__card-wrapper  col-12 col-md-6 col-xl-3">
+            <div class="package__tooltip package__tooltip--price">
+            Anda akan mendapatkan cashback hingga 25 Poin dari Pembelian Produk ini (up to maximum)
+            </div>
+            <div class="package__card package--pelajar">
+                <p class="package__label package__label--green">Termurah!</p>
+                <h3 class="package__package-title">Pelajar</h3>
+                <p class="package__price">Rp. 60.800</p>
+                <p class="package__discount-price">Rp 40.223</p>
+                <p class="package__point">503 - 1.448 Poin</p>
+                <div class="package__hr"></div>
+                <a href="#" class="btn nh-btn btn--secondary btn--solid no-gutters gtmProductView" data-product="Bayi"  data-label="Section Table Price">Pilih Sekarang</a>
+                <p class="package__description">Sesuai untuk Pemula atau Belajar Website</p>
+                <ul class="package__feature">
+                    {% for item in planFeatures.pelajar %}
+                    <li>
+                        <div class="package__icon nh-tooltip">
+                            <img src="https://www.niagahoster.co.id/assets/images/2019/hosting-package/icon-question-mark.svg" alt="">
+                            <span class="nh-tooltip__text nh-tooltip__text--right">{{ item.tooltip }}</span>
+                        </div>
+                        <p class="package__feature-text">{{ item.feature }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <a class="package__see-detail" href="">Lihat detail fitur</a>
+            </div>
+        </div>
+        <div class="package__card-wrapper  col-12 col-md-6 col-xl-3">
+            <div class="package__tooltip package__tooltip--price">
+            Anda akan mendapatkan cashback hingga 26 Poin dari Pembelian Produk ini (up to maximum)
+            </div>
+            <div class="package__card package--personal">
+                <p class="package__label package__label--green">Termurah!</p>
+                <h3 class="package__package-title">Personal</h3>
+                <p class="package__price">Rp. 106.250,-</p>
+                <p class="package__discount-price">Rp 26.563</p>
+                <p class="package__point">637 - 1.220 Poin</p>
+                <div class="package__hr"></div>
+                <a href="#" class="btn nh-btn btn--secondary btn--solid no-gutters gtmProductView" data-product="Bayi"  data-label="Section Table Price">Pilih Sekarang</a>
+                <p class="package__description">Sesuai untuk Pemula atau Belajar Website</p>
+                <ul class="package__feature">
+                    {% for item in planFeatures.personal %}
+                    <li>
+                        <div class="package__icon nh-tooltip">
+                            <img src="https://www.niagahoster.co.id/assets/images/2019/hosting-package/icon-question-mark.svg" alt="">
+                            <span class="nh-tooltip__text nh-tooltip__text--right">{{ item.tooltip }}</span>
+                        </div>
+                        <p class="package__feature-text">{{ item.feature }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <a class="package__see-detail" href="">Lihat detail fitur</a>
+            </div>
+        </div>
+        <div class="package__card-wrapper  col-12 col-md-6 col-xl-3">
+            <div class="package__tooltip package__tooltip--price">
+            Anda akan mendapatkan cashback hingga 27 Poin dari Pembelian Produk ini (up to maximum)
+            </div>
+            <div class="package__card package--bisnis">
+                <p class="package__best-seller">Best Seller</p>
+                <p class="package__label package__label--green">Termurah!</p>
+                <h3 class="package__package-title">Bisnis</h3>
+                <p class="package__price">Rp. 147.800,-</p>
+                <p class="package__discount-price">Rp. 85.724</p>
+                <p class="package__point">1.034 - 3.086 Poin</p>
+                <div class="package__hr"></div>
+                <a href="#" class="btn nh-btn btn--secondary btn--solid no-gutters gtmProductView" data-product="Bayi"  data-label="Section Table Price">Pilih Sekarang</a>
+                <p class="package__description">Sesuai untuk Pemula atau Belajar Website</p>
+                <ul class="package__feature">
+                    {% for item in planFeatures.bisnis %}
+                    <li>
+                        <div class="package__icon  nh-tooltip">
+                            <img src="https://www.niagahoster.co.id/assets/images/2019/hosting-package/icon-question-mark.svg" alt="">
+                            <span class="nh-tooltip__text nh-tooltip__text--right">{{ item.tooltip }}</span>
+                        </div>
+                        <p class="package__feature-text">{{ item.feature }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <a class="package__see-detail" href="">Lihat detail fitur</a>
+            </div>
+        </div>
+    </div>
+</section>

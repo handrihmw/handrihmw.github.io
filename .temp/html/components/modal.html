@@ -1,0 +1,99 @@
+<div class="container">
+    <h1 class="display-4 text-center mt-5 mb-4">Atomic Modals</h1>
+    <div class="row mb-4">
+        <div class="col text-center">
+            <a href="#" class="btn btn-lg btn--dark text-white btn--solid" data-toggle="modal" data-target="#modalSignup">Sign Up Modal</a>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col text-center">
+            <a href="#" class="btn btn-lg btn--dark text-white btn--solid" data-toggle="modal" data-target="#modalLogin">Sign In Modal</a>
+        </div>
+    </div>
+    
+    <!-- Atomic Modal Sign Up -->
+    <div class="signup-modal modal fade" id="modalSignup" tabindex="-1" aria-labelledby="modalSignuppLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <h5 class="signup-modal__title" id="modalSignuppLabel">Silakan Mendaftar</h5>
+            <p class="signup-modal__subtitle">Sudah punya akun. <span class="signup-modal__subtitle--show-login" onclick="">Login disini</span></p>
+            <form class="signup-modal__form signup-modal__form--signup">
+                <div class="form-group">
+                <label for="signupFullName">Nama Lengkap</label>
+                <input type="text" class="form-control" name="full_name" id="signupFullName" placeholder="Tulis namamu disini" required>
+                </div>
+                <div class="form-group">
+                <label for="signupPhoneNumber">Nomor Telepon</label>
+                <input type="tel" class="form-control" name="phone_number" id="signupPhoneNumber" placeholder="+6281333444xxx" required>
+                </div>
+                <div class="form-group">
+                <label for="signupEmail">Email</label>
+                <input type="email" class="form-control" name="email" id="signupEmail" placeholder="nama@email.com" required>
+                </div>
+                <div class="form-group mb-0">
+                <label for="signupPassword">Password</label>
+                <input type="password" class="form-control" name="password" id="signupPassword" placeholder="Minimal 6 karakter kombiniasi huruf dan angka" required>
+                </div>
+                <input type="hidden" name="auto_login" value="1">
+                <div class="text-center">
+                <a class="btn signup-modal__button signup-modal__button--register" href="javascript:void(0)" onclick="">
+                <span class="signup-modal__button--loading">
+                    <i class="fas fa-circle-notch fa-spin"></i>
+                </span>
+                Daftar Sekarang
+                </a>
+                </div>
+            </form>
+            <p class="signup-modal__persuasive">atau mendaftar dengan cara lain</p>
+            <a href="" class="signup-modal__button signup-modal__button--google" onclick=""><i class="fab fa-google"></i> Daftar dengan google</a>
+            <a href="" class="signup-modal__button signup-modal__button--facebook" onclick=""><i class="fab fa-facebook-f"></i> Daftar dengan facebook</a>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Atomic Modal Login -->
+    <div class="signup-modal modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginpLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <h5 class="signup-modal__title" id="modalLoginpLabel">Silakan Login</h5>
+            <p class="signup-modal__subtitle">Belum punya akun. <span class="signup-modal__subtitle--show-signup" onclick="">Daftar disini</span></p>
+            <div class="alert alert-danger" role="alert"></div>
+            <form class="signup-modal__form signup-modal__form--login">
+                <div class="signup-modal__step-1">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" class="form-control" name="email" id="loginEmail" placeholder="nama@email.com" required>
+                </div>
+                <div class="form-group mb-0">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" class="form-control" name="password" id="loginPassword" placeholder="Minimal 6 karakter kombiniasi huruf dan angka" required>
+                </div>
+                <input type="hidden" name="step" value="1">
+                    <div class="signup-modal__forgot-password">
+                        <a href="" onclick="">Lupa password?</a>
+                    </div>
+                </div>
+    
+                <div class="signup-modal__step-2">
+                    <div class="form-group">
+                        <label for="loginTwoFa">Authentication Code</label>
+                        <input type="tetx" class="form-control" name="2fa_code" id="loginTwoFa" inputmode="numeric" pattern="[0-9]*" placeholder="123456">
+                    </div>
+                </div>
+    
+                <div class="text-center">
+                    <a class="btn signup-modal__button signup-modal__button--login" href="javascript:void(0)" onclick="">
+                        <span class="signup-modal__button--loading">
+                        <i class="fas fa-circle-notch fa-spin"></i>
+                        </span>
+                        Masuk Sekarang Juga
+                    </a>
+                </div>
+            </form>
+            <p class="signup-modal__persuasive">atau masuk dengan cara lain</p>
+            <a href="" class="signup-modal__button signup-modal__button--google" onclick=""><i class="fab fa-google"></i> Login dengan google</a>
+            <a href="" class="signup-modal__button signup-modal__button--facebook" onclick=""><i class="fab fa-facebook-f"></i> Login dengan facebook</a>
+            </div>
+        </div>
+    </div>
+</div>
